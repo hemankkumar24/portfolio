@@ -42,7 +42,20 @@
   font-style: normal;
 }
 
+#background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
 
+#background canvas {
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .coolvetica{
   font-family: Coolvetica;

@@ -15,7 +15,7 @@ const Navbar = () => {
                 Projects
             </div>
         </div>
-        <div className='text-xl header border-2 border-white p-2 rounded-xl'>
+        <div className='text-xl header border-2 border-white p-2 px-3 rounded-xl mt-1'>
             Contact Me
         </div>
     </div>

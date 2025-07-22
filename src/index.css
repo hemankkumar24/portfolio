@@ -28,11 +28,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Classyvogue';
+  src: url('/fonts/Classyvogueregular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GrandeItalic';
+  src: url('/fonts/Grande Italic.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 .coolvetica{
   font-family: Coolvetica;
 }
 
-#mainName{
+.mainName{
   font-family: HighEmpathy;
 }
 
@@ -42,4 +58,12 @@
 
 .contactme{
   font-family: StretchPro;
+}
+
+.classyVogue{
+  font-family: Classyvogue;
+}
+
+.grandeItalic{
+  font-family: GrandeItalic;
 }

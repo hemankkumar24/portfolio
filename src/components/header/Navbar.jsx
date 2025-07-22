@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div className='text-white z-1 flex justify-between items-center py-5'>
-        <div className='text-5xl text-white' id='mainName'>Hemank</div>
+        <div className='text-5xl text-white mainName'>Hemank</div>
         <div className='flex header gap-10'>
             <div>
                 About

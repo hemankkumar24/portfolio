@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'HighEmpathy';
+  src: url('/fonts/High Empathy.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Moderniz';
+  src: url('/fonts/Moderniz.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StretchPro';
+  src: url('/fonts/StretchPro.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/Coolvetica Rg.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.coolvetica{
+  font-family: Coolvetica;
+}
+
+#mainName{
+  font-family: HighEmpathy;
+}
+
+.header{
+  font-family: Moderniz;
+}
+
+.contactme{
+  font-family: StretchPro;
+}

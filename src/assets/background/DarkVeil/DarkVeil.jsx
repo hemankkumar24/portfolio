@@ -75,7 +75,7 @@ void main(){
 
 export default function DarkVeil({
   hueShift = 0,
-  noiseIntensity = 0.1,
+  noiseIntensity = 0.125,
   scanlineIntensity = 0,
   speed = 0.0,
   scanlineFrequency = 0,
@@ -116,6 +116,9 @@ export default function DarkVeil({
         h = parent.clientHeight;
       renderer.setSize(w * resolutionScale, h * resolutionScale);
       program.uniforms.uResolution.value.set(w, h);
+
+      // Add this line to redraw the scene with the new dimensions
+      renderer.render({ scene: mesh });
     };
 
     window.addEventListener("resize", resize);

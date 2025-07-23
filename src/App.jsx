@@ -15,7 +15,7 @@ const App = () => {
           <DarkVeil />
         </div>
       </div>
-
+    
       <div className="px-64 w-full min-h-screen overflow-x-auto">
         <Navbar />
         <HeroSection />
@@ -26,7 +26,7 @@ const App = () => {
         <AboutMe />
       </div>
 
-      <div className="w-full h-[60vh] overflow-x-auto">
+      <div className="w-full h-[200vh] overflow-x-auto">
         <Skills />
       </div>
     </>

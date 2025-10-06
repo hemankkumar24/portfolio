@@ -81,12 +81,14 @@ const Contact = () => {
 
             <div className='bg-neutral-600/15 p-3 rounded-xl hover:scale-102 transition duration-300'>
               <form onSubmit={handleSubmit}>
-                <input type="text" className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-5 text-xl text-white normal' value={Name} onChange={(e)=> {setName(e.target.value)}} placeholder='Name'/>
-                <input type="email" className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-5 text-xl text-white normal mt-2' value={Email} onChange={(e)=> {setEmail(e.target.value)}} placeholder='Email'/>
+                <input type="text" className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-5 text-xl text-white normal' value={Name} onChange={(e)=> {setName(e.target.value)}} placeholder='Name'
+                required/>
+                <input type="email" className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-5 text-xl text-white normal mt-2' value={Email} onChange={(e)=> {setEmail(e.target.value)}} placeholder='Email' required/>
                 <textarea
                   className="w-full h-100 bg-neutral-50/10 outline-0 rounded-xl p-5 text-xl text-white normal mt-2 resize-none"
                   placeholder="Message"
-                  value={Message} onChange={(e)=> {setMessage(e.target.value)}} 
+                  value={Message} onChange={(e)=> {setMessage(e.target.value)}}
+                  required
                 ></textarea>
                 <button className='text-white text-center mt-1 normal_bold p-5 bg-gradient-to-l from-purple-950 to-purple-700 from-50% rounded-xl w-full cursor-pointer hover:from-purple-700 active:from-purple-900 active:to-purple-900 transition duration-300'>
                   Submit

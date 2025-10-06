@@ -6,6 +6,7 @@ import Hero from './components/Hero'
 import Projects from './components/Projects'
 import AboutMe from './components/AboutMe'
 import Contact from './components/Contact'
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,8 @@ function App() {
       <Projects />
       <AboutMe />
       <Contact />
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false}
+        closeOnClick pauseOnHover draggable theme="dark" />
     </>
   )
 }

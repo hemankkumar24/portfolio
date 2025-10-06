@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { Mail, ArrowUpRight } from 'lucide-react'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Contact = () => {
   const [Name, setName] = useState('')
   const [Email, setEmail] = useState('')
   const [Message, setMessage] = useState('')
+  const BACKEND = import.meta.env.VITE_BACKEND;
 
   const handleSubmit = async (e) => {
       e.preventDefault();
@@ -25,10 +28,13 @@ const Contact = () => {
 
           const result = await res.json();
           console.log(result);
-          alert(result.msg);
+          if (result.success) {
+            toast.success(result.msg); 
+          } else {
+            toast.error(result.msg); 
+          }
         } catch (err) {
-          console.error(err);
-          alert('Something went wrong!');
+          toast.error('Something went wrong!');
         }
       };
 

@@ -36,12 +36,12 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen w-full bg-cover bg-center bg-[#080021] -z-50 py-20" id="projects">
-        <div className='text-center text-5xl pb-20 hero_text text-white'>
+        <div className='text-center text-4xl lg:text-5xl pb-20 hero_text text-white'>
             My Work
         </div>
     
-        <div className='px-50'>
-            <div className='grid grid-cols-2 gap-x-4 gap-y-4'> 
+        <div className='px-5 md:px-10 2xl:px-50'>
+            <div className='grid lg:grid-cols-2 gap-x-4 gap-y-4'> 
                 {
                     projectsData.map((project, index) => (
                         <Single_Project

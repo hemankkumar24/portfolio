@@ -4,11 +4,11 @@ import dotenv from 'dotenv';
 import { createClient } from '@supabase/supabase-js';
 
 dotenv.config();
-
+const allowedOrigin = 'https://hemank.vercel.app';
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 
 const app = express();
-app.use(cors()); 
+app.use(cors({origin: allowedOrigin})); 
 app.use(express.json());
 
 app.get('/', (req, res) => {

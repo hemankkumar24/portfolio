@@ -79,7 +79,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className='bg-neutral-600/15 p-3 rounded-xl'>
+            <div className='bg-neutral-600/15 p-3 rounded-xl hover:scale-102 transition duration-300'>
               <form onSubmit={handleSubmit}>
                 <input type="text" className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-5 text-xl text-white normal' value={Name} onChange={(e)=> {setName(e.target.value)}} placeholder='Name'/>
                 <input type="email" className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-5 text-xl text-white normal mt-2' value={Email} onChange={(e)=> {setEmail(e.target.value)}} placeholder='Email'/>

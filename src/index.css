@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/Coolvetica.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Normal_Bold';
+  src: url('/fonts/Normal_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Normal';
+  src: url('/fonts/Normal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hero_text {
+  font-family: 'Coolvetica', sans-serif;
+}
+
+.normal_bold {
+  font-family: 'Normal_Bold', sans-serif;
+}
+
+.normal {
+  font-family: 'Normal', sans-serif;
+}
+
+@import "tailwindcss";

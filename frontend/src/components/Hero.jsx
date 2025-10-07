@@ -69,7 +69,7 @@ const Hero = () => {
 
                     {/*Hero Image*/}
                     <div className='w-[90%] sm:w-100 md:w-120 rounded-full lg:rounded-tr-none lg:rounded-l-full object-bottom bg-gradient-to-t from-indigo-950 to-indigo-200/75 border-b-5 border-b-white mt-15 lg:mt-0'>
-                        <img src="images/hemank_nobg.png" alt="hemank_photo" className='rounded-full filter drop-shadow-2xl'/>
+                        <img src="images/hemank_nobg.webp" alt="hemank_photo" className='rounded-full filter drop-shadow-2xl'/>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Single_Project = ({ image, title, description, liveLink, githubLink }) => {
     return (
-        <div className='rounded-xl border-2 border-[#18083d] hover:scale-102 transition duration-300'>
+        <div className='rounded-xl border-2 border-[#18083d] hover:scale-102 hover:shadow-purple-950 hover:shadow-lg transition duration-300'>
             <img src={image} alt={title} className='rounded-t-xl' />
             <div className='bg-gradient-to-r from-violet-900 to-purple-300 to-50% bg-clip-text text-transparent normal pl-5 pt-5 text-3xl'>
                 {title}

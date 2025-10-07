@@ -10,7 +10,7 @@ const AboutMe = () => {
 
         <div className='px-5 md:px-10 2xl:px-50'>
             <div className='grid 2xl:grid-cols-2 gap-x-4 gap-y-4'>
-                <div className='bg-[#12062c] border-2 border-[#1f0b4e] rounded-xl px-2 md:px-10 py-5 hover:scale-102 transition duration-300'>
+                <div className='bg-[#12062c] border-2 border-[#1f0b4e] rounded-xl px-2 md:px-10 py-5 hover:scale-102 hover:shadow-purple-950 hover:shadow-lg transition duration-300'>
                     <div className='text-4xl bg-gradient-to-r to-violet-950 from-purple-300 bg-clip-text text-transparent normal_bold'>
                         The Origins
                     </div>
@@ -22,7 +22,7 @@ const AboutMe = () => {
                     </div>
                 </div>
                 <div className='text-white'>
-                    <div className='bg-[#12062c] border-2 border-[#1f0b4e] rounded-xl  px-2 md:px-10 py-5 h-full hover:scale-102 transition duration-300'>
+                    <div className='bg-[#12062c] border-2 border-[#1f0b4e] rounded-xl  px-2 md:px-10 py-5 h-full hover:scale-102 transition duration-300 hover:shadow-purple-950 hover:shadow-lg'>
                         <div className='text-4xl bg-gradient-to-r to-violet-950 from-purple-300 bg-clip-text text-transparent normal_bold'>
                             Experiences
                         </div>

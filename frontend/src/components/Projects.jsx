@@ -15,7 +15,7 @@ const Projects = () => {
             image: "images/projects/clear_report.png",
             title: "ClearReport",
             description: "ClearReport is a full-stack Retrieval-Augmented Generation (RAG) application designed to process health reports, extract structured data, and provide AI-powered insights in natural language.",
-            liveLink: "https://clearreport-full-stack-rag-application-fpio27ihi.vercel.app/",
+            liveLink: "https://clearreport-full-stack-rag-applicat.vercel.app/",
             githubLink: "https://github.com/hemankkumar24/clearreport-full-stack-rag-application"
         },
         {

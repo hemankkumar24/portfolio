@@ -54,7 +54,7 @@ const Contact = () => {
                 <div className='text-lg lg:text-2xl lg:w-full opacity-50 normal_bold bg-gradient-to-l to-10% from-neutral-600 to-white text-transparent bg-clip-text'>
                     Have questions or something exciting in mind? Let’s make it happen.
                 </div>
-                <div className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-2 text-sm md:text-xl text-white mt-5 flex flex-col justify-center mb-5 xl:mb-0'>
+                <div className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-2 text-sm md:text-xl text-white mt-5 flex flex-col justify-center mb-5 xl:mb-0 hover:scale-102 hover:shadow-purple-950 hover:shadow-lg transition duration-300'>
                   <div className='flex justify-between'>
                     <div className='flex'>
                       <div className='hidden md:block'>
@@ -79,7 +79,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className='bg-neutral-600/15 p-3 rounded-xl hover:scale-102 transition duration-300'>
+            <div className='bg-neutral-600/15 p-3 rounded-xl hover:scale-102 hover:shadow-purple-950 hover:shadow-lg transition duration-300'>
               <form onSubmit={handleSubmit}>
                 <input type="text" className='w-full h-20 bg-neutral-50/10 outline-0 rounded-xl p-5 text-xl text-white normal' value={Name} onChange={(e)=> {setName(e.target.value)}} placeholder='Name'
                 required/>

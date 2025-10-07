@@ -4,7 +4,7 @@ import { Mail, Linkedin, Github } from 'lucide-react'
 const Hero = () => {
   return (
     <div className="h-full bg-cover bg-center -z-50"
-    style={{ backgroundImage: "url('/images/hero_background.jpg')" }}
+    style={{ backgroundImage: "url('/images/hero_background.webp')" }}
     >
         {/* Hero Text Hello */}
         <div className='w-full h-full'>

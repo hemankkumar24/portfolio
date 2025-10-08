@@ -7,18 +7,21 @@ import Projects from './components/Projects'
 import AboutMe from './components/AboutMe'
 import Contact from './components/Contact'
 import { ToastContainer } from 'react-toastify';
+import TimeoutLoader from './components/TimeoutLoader'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Hero />
-      <Projects />
-      <AboutMe />
-      <Contact />
-      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false}
-        closeOnClick pauseOnHover draggable theme="dark" />
+      <TimeoutLoader>
+        <Hero />
+        <Projects />
+        <AboutMe />
+        <Contact />
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false}
+          closeOnClick pauseOnHover draggable theme="dark" />
+      </TimeoutLoader>
     </>
   )
 }

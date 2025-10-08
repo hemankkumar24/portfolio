@@ -12,38 +12,43 @@ const Hero = () => {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline();
 
-            tl.from(".object_navbar",{
-                y:15,
-                opacity:0,
-                delay:0.25,
-                duration:0.75,
-                stagger: 0.15,
-            })
+            tl.to(".object_navbar", {
+            y: 0,
+            opacity: 0.80,
+            delay: 0.25,
+            duration: 0.75,
+            stagger: 0.15,
+            ease: "power2.out",
+            });
 
-            tl.from(".object_left_hero",{
-                x:-15,
-                opacity:0,
-                duration:1,
-            }, "<0.5")
+            tl.to(".object_left_hero", {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+            }, "<0.5");
 
-            tl.from(".object_right_hero",{
-                x:15,
-                opacity:0,
-                duration:1,
-            }, "<")
+            tl.to(".object_right_hero", {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+            }, "<");
 
-            tl.from(".object_bottom",{
-                y:15,
-                opacity:0,
-                duration:0.5,
-            }, "<0.5")
+            tl.to(".object_bottom", {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            ease: "power2.out",
+            }, "<0.5");
         }, main);
-        return () => ctx.revert();
-    }, []);
+
+  return () => ctx.revert();
+}, []);
 
 
     return (
-        <div className="h-full bg-cover bg-center -z-50"
+        <div className="min-h-screen bg-cover bg-center -z-50"
             style={{ backgroundImage: "url('/images/hero_background.webp')" }}
         >
             {/* Hero Text Hello */}
@@ -56,21 +61,21 @@ const Hero = () => {
 
                 {/* Navbar */}
                 <div className='text-white text-xl flex py-5 justify-between hero_text font-extralight cursor-pointer'>
-                    <div className='object_navbar px-5 md:px-10 2xl:px-50 opacity-80 hover:opacity-100 z-20'>
+                    <div className='object_navbar opacity-0 translate-y-[-15px] px-5 md:px-10 2xl:px-50 hover:opacity-100 z-20'>
                         Hemank
                     </div>
                     <div className='w-[40%] lg:flex justify-around cursor-pointer z-20 hidden  -space-x-35'>
-                        <h1 className='object_navbar opacity-80 hover:opacity-100' onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+                        <h1 className='object_navbar opacity-0 translate-y-[-15px] hover:opacity-100' onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                             Projects
                         </h1>
-                        <h1 className='object_navbar opacity-80 hover:opacity-100' onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+                        <h1 className='object_navbar opacity-0 translate-y-[-15px] hover:opacity-100' onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
                             About
                         </h1>
-                        <h1 className='object_navbar opacity-80 hover:opacity-100' onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                        <h1 className='object_navbar opacity-0 translate-y-[-15px] hover:opacity-100' onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                             Contact
                         </h1>
                     </div>
-                    <div className='object_navbar px-5 md:px-10 2xl:px-50 opacity-80 hover:opacity-100 z-20'>
+                    <div className='object_navbar opacity-0 translate-y-[-15px] px-5 md:px-10 2xl:px-50 hover:opacity-100 z-20'>
                         <a href="resume/Hemank_Resume.pdf" target="_blank">
                             Resume
                         </a>
@@ -80,7 +85,7 @@ const Hero = () => {
                 {/*Hero Text Here*/}
                 <div className='px-5 md:px-10 2xl:px-50 pt-40 lg:pt-50 text-white normal_bold'>
                     <div className='flex flex-col text-center lg:text-left lg:flex-row justify-between items-center'>
-                        <div className='object_left_hero lg:w-[60%]'>
+                        <div className='object_left_hero opacity-0 translate-x-[-15px] lg:w-[60%]'>
                             <div className='text-3xl sm:text-5xl xl:text-6xl'>
                                 I am Hemank!
                             </div>
@@ -108,13 +113,13 @@ const Hero = () => {
                         </div>
 
                         {/*Hero Image*/}
-                        <div className='object_right_hero w-[90%] sm:w-100 md:w-120 rounded-full lg:rounded-tr-none lg:rounded-l-full object-bottom bg-gradient-to-t from-indigo-950 to-indigo-200/75 border-b-5 border-b-white mt-15 lg:mt-0'>
+                        <div className='object_right_hero opacity-0 translate-x-[15px] w-[90%] sm:w-100 md:w-120 rounded-full lg:rounded-tr-none lg:rounded-l-full object-bottom bg-gradient-to-t from-indigo-950 to-indigo-200/75 border-b-5 border-b-white mt-15 lg:mt-0'>
                             <img src="images/hemank_nobg.webp" alt="hemank_photo" className='rounded-full filter drop-shadow-2xl' />
                         </div>
                     </div>
                 </div>
 
-                <div className='object_bottom text-white font-extralight h-auto w-full mt-25 flex justify-center gap-5 pb-20'>
+                <div className='object_bottom opacity-0 translate-y-[-15px] text-white font-extralight h-auto w-full mt-25 flex justify-center gap-5 pb-20'>
                     <div className='border-1 p-1 rounded-md hover:text-black hover:bg-white cursor-pointer hover:scale-102 transition duration-300'>
                         <a href="mailto:hemankkumar24@gmail.com" target='_blank'>
                             <Mail className="w-6 h-6" />

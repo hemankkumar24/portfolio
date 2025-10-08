@@ -1,14 +1,40 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Contact from './Contact'
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
+
+    const about_me = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+
+            gsap.from(".individual_box_object", {
+                y: 45,
+                opacity: 0,
+                duration: 0.75,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".individual_box_object",
+                    start: "top 80%",
+                },
+                clearProps: true
+            });
+        }, about_me)
+
+        return () => ctx.revert();
+    }, [])
+
   return (
-    <div className=" bg-[#14112c] bg-cover bg-center py-20" id="about">
+    <div className=" bg-[#14112c] bg-cover bg-center py-20" id="about" ref={about_me}>
         <div className='text-center text-5xl pb-20 hero_text text-white'>
             About Me
         </div>
 
-        <div className='px-5 md:px-10 2xl:px-50'>
+        <div className='individual_box_object px-5 md:px-10 2xl:px-50'>
             <div className='grid 2xl:grid-cols-2 gap-x-4 gap-y-4'>
                 <div className='bg-[#12062c] border-2 border-[#1f0b4e] rounded-xl px-2 md:px-10 py-5 hover:scale-102 hover:shadow-purple-950 hover:shadow-lg transition duration-300'>
                     <div className='text-4xl bg-gradient-to-r to-violet-950 from-purple-300 bg-clip-text text-transparent normal_bold'>

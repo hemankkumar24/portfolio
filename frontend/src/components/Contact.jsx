@@ -1,8 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Mail, ArrowUpRight } from 'lucide-react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 const Contact = () => {
+
+  const contact_me = useRef(null);
+
+  useEffect(() => {
+      const ctx = gsap.context(() => {
+
+          gsap.from(".contact_object", {
+              y: 45,
+              opacity: 0,
+              duration: 0.75,
+              ease: "power2.out",
+              scrollTrigger: {
+                  trigger: ".contact_object",
+                  start: "top 80%",
+              },
+              clearProps: true
+          });
+      }, contact_me)
+
+      return () => ctx.revert();
+  }, [])
+
+
   const [Name, setName] = useState('')
   const [Email, setEmail] = useState('')
   const [Message, setMessage] = useState('')
@@ -39,12 +68,12 @@ const Contact = () => {
       };
 
   return (
-    <div className="h-full text-3xl py-20 bg-[#080021]" id="contact">
+    <div className="h-full text-3xl py-20 bg-[#080021]" id="contact" ref={contact_me}>
         <div className='text-center text-5xl pb-20 hero_text text-white'>
             Contact
         </div>
 
-        <div className='px-5 md:px-10 2xl:px-50'>
+        <div className='contact_object px-5 md:px-10 2xl:px-50'>
           <div className='grid xl:grid-cols-2 gap-x-4'>
             <div>
               <div className='flex flex-col w-[100%] xl:w-[95%]'>

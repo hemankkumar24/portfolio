@@ -24,7 +24,11 @@ html {
 }
 
 html, body {
-  background-color: #18181B;   /* match your site's bg */
+  background-image: url('/images/hero_background.webp');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;
+  min-height: 100vh; 
 }
 
 .hero_text {
